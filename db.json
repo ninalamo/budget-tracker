@@ -1,0 +1,70 @@
+{
+  "transactions": [
+    {
+      "id": "b0fe",
+      "amount": null,
+      "date": "2026-02-04T16:13:45.097Z",
+      "note": "asdf",
+      "type": "expense",
+      "category": {
+        "id": 1770221625097,
+        "name": "asdf",
+        "type": "expense"
+      }
+    },
+    {
+      "id": "68e2",
+      "amount": 234324324,
+      "date": "2026-02-04T16:14:20.865Z",
+      "note": "",
+      "type": "income",
+      "category": {
+        "id": 1770221660865,
+        "name": "asdf",
+        "type": "income"
+      }
+    },
+    {
+      "id": "7f63",
+      "amount": 5222,
+      "date": "2026-02-04T16:17:45.407Z",
+      "note": "",
+      "type": "expense",
+      "category": {
+        "id": 1770221865407,
+        "name": "test",
+        "type": "expense"
+      }
+    },
+    {
+      "id": "f663",
+      "amount": 23423432,
+      "date": "2026-02-04T16:17:55.734Z",
+      "note": "",
+      "type": "expense",
+      "category": {
+        "id": 1770221875734,
+        "name": "asdfa",
+        "type": "expense"
+      }
+    }
+  ],
+  "budgets": [],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Food",
+      "type": "expense"
+    },
+    {
+      "id": "2",
+      "name": "Transport",
+      "type": "expense"
+    },
+    {
+      "id": "3",
+      "name": "Salary",
+      "type": "income"
+    }
+  ]
+}
