@@ -1,33 +1,32 @@
 # WiseWallet
 
-A comprehensive personal financial management app built with React Native and Expo.
+A comprehensive personal finance management app built with React Native (Expo).
 
 ## Features
 
--   📊 **Dashboard**: See your total balance, income vs expenses, and recent transactions at a glance.
--   💡 **Financial Tips**: Get random money management advice to improve your financial habits.
--   📈 **Expense Chart**: Visualize where your money goes with an interactive pie chart.
--   🧾 **Receipt Capture**: Attach photos of receipts to any transaction (Camera or Gallery).
--   💳 **Payment Methods**: Track whether you paid with Cash, Card, Bank Transfer, or E-Wallet.
--   📍 **Establishment Tracking**: Log where the transaction happened (e.g., "Jollibee", "SM Mall").
--   📅 **Calendar View**: See your transactions on a calendar with day-by-day details.
--   💰 **Budgeting**: Set monthly spending limits and track your progress with visual bars.
+| Feature | Description |
+|---------|-------------|
+| 📊 **Dashboard** | Balance overview, income/expense summary, pie chart |
+| 💰 **Transactions** | Add, Edit, Delete with receipt photos |
+| 💳 **Payment Methods** | Track Cash, Card, Bank, E-Wallet |
+| 📍 **Establishment** | Log where you spent (e.g., "Jollibee") |
+| 🧾 **Receipts** | Attach photos via Camera or Gallery |
+| 📅 **Calendar** | View transactions by date |
+| 📈 **Reports** | Monthly comparison with bar charts |
+| 💵 **Budgets** | Set limits with progress bars |
+| 📋 **Agenda** | Reminders for scheduled payments |
+| 💡 **Financial Tips** | Rotating money management advice |
+| ⚙️ **Settings** | Currency toggle (₱ PHP / $ USD) |
 
 ## Tech Stack
 
--   **Framework**: React Native + Expo
--   **Language**: TypeScript
--   **UI**: React Native Paper (Material Design)
--   **Charts**: react-native-chart-kit
--   **Calendar**: react-native-calendars
--   **Camera**: expo-image-picker
--   **API (Dev)**: json-server
-
-## Prerequisites
-
--   Node.js (LTS)
--   npm
--   Android Studio (for Android) or Xcode (for iOS)
+- **Framework**: React Native + Expo
+- **Language**: TypeScript
+- **UI**: React Native Paper
+- **Charts**: react-native-chart-kit
+- **Calendar**: react-native-calendars
+- **Camera**: expo-image-picker
+- **API (Dev)**: json-server
 
 ## How to Run
 
@@ -37,45 +36,49 @@ A comprehensive personal financial management app built with React Native and Ex
 npm install
 ```
 
-### 2. Start the Mock Backend
-
-This app uses `json-server` for development. You **must** run this for data to load/save:
+### 2. Start Mock Server
 
 ```bash
 npm run server
 ```
 
-Keep this terminal open.
+> Keep this terminal open.
 
-### 3. Start the App
+### 3. Start App
 
-Open a **new** terminal:
-
-**For Web:**
 ```bash
-npm run web
+npm run web      # Browser
+npm run android  # Android Emulator
+npm run ios      # iOS Simulator (Mac only)
 ```
 
-**For Android Emulator:**
-```bash
-npm run android
-```
+## App Navigation
 
-**For iOS Simulator (Mac only):**
-```bash
-npm run ios
-```
+From the Dashboard header:
 
-## Usage
+| Icon | Screen | Purpose |
+|------|--------|---------|
+| 📅 | Calendar | View transactions by date |
+| 📊 | Reports | Monthly comparison charts |
+| 💰 | Budgets | Set spending limits |
+| 📋 | Agenda | Reminders & scheduled payments |
+| ⚙️ | Settings | Currency toggle |
 
-1.  **View Dashboard**: See your balance and recent activity.
-2.  **Tap "Add" Button**: Add a new transaction with all details.
-3.  **Attach a Receipt**: Use the "Take Photo" or "Gallery" buttons.
-4.  **Tap Calendar Icon**: View transactions by date.
-5.  **Tap Budget Icon**: Set and track your spending limits.
+## Screens Overview
+
+- **Dashboard** - Main overview with balance, charts, tips
+- **Add Transaction** - Full form with receipt, payment method
+- **Transaction Details** - View all fields, edit, delete
+- **Calendar** - Tap dates to see daily transactions
+- **Reports** - This month vs last month comparison
+- **Budgets** - Progress bars for spending limits
+- **Agenda** - Checklist for scheduled payments
+- **Settings** - Switch between PHP (₱) and USD ($)
 
 ## Troubleshooting
 
--   **Data not loading?** Make sure `npm run server` is running.
--   **Network error on Android?** The app uses `10.0.2.2` for emulators. For physical devices, update `API_URL` in `hooks/useTransactions.ts` to your computer's IP.
--   **Charts empty?** Add some expense transactions first!
+| Issue | Solution |
+|-------|----------|
+| Data not loading | Ensure `npm run server` is running |
+| Network error (Android) | Use emulator or update IP in `hooks/useTransactions.ts` |
+| Charts empty | Add some transactions first |

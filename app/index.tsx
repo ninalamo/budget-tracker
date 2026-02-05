@@ -1,5 +1,5 @@
 import { View, ActivityIndicator, ScrollView } from "react-native";
-import { FAB, IconButton, Appbar } from "react-native-paper";
+import { FAB, Appbar } from "react-native-paper";
 import { useRouter, useFocusEffect } from "expo-router";
 import { useCallback } from "react";
 import { useTransactions } from "../hooks/useTransactions";
@@ -31,7 +31,10 @@ export default function Dashboard() {
       <Appbar.Header>
         <Appbar.Content title="WiseWallet" />
         <Appbar.Action icon="calendar" onPress={() => router.push("/calendar")} />
-        <Appbar.Action icon="chart-pie" onPress={() => router.push("/budgets")} />
+        <Appbar.Action icon="chart-bar" onPress={() => router.push("/reports")} />
+        <Appbar.Action icon="wallet" onPress={() => router.push("/budgets")} />
+        <Appbar.Action icon="clipboard-list" onPress={() => router.push("/agenda")} />
+        <Appbar.Action icon="cog" onPress={() => router.push("/settings")} />
       </Appbar.Header>
 
       <ScrollView contentContainerStyle={{ paddingBottom: 80 }}>
