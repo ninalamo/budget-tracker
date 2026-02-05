@@ -1,11 +1,12 @@
 import { View, ActivityIndicator, ScrollView } from "react-native";
-import { Appbar, FAB } from "react-native-paper";
+import { FAB, IconButton, Appbar } from "react-native-paper";
 import { useRouter, useFocusEffect } from "expo-router";
 import { useCallback } from "react";
 import { useTransactions } from "../hooks/useTransactions";
 import { SummaryCard } from "../components/SummaryCard";
 import { ChartCard } from "../components/ChartCard";
 import { TransactionList } from "../components/TransactionList";
+import { FinancialTip } from "../components/FinancialTip";
 
 export default function Dashboard() {
   const router = useRouter();
@@ -27,11 +28,19 @@ export default function Dashboard() {
 
   return (
     <View style={{ flex: 1, backgroundColor: "#f5f5f5" }}>
+      <Appbar.Header>
+        <Appbar.Content title="WiseWallet" />
+        <Appbar.Action icon="calendar" onPress={() => router.push("/calendar")} />
+        <Appbar.Action icon="chart-pie" onPress={() => router.push("/budgets")} />
+      </Appbar.Header>
+
       <ScrollView contentContainerStyle={{ paddingBottom: 80 }}>
         <SummaryCard transactions={transactions} />
+        <FinancialTip />
         <ChartCard transactions={transactions} />
         <TransactionList transactions={transactions} />
       </ScrollView>
+      
       <FAB
         icon="plus"
         label="Add"

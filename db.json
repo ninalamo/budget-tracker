@@ -1,55 +1,55 @@
 {
   "transactions": [
     {
-      "id": "b0fe",
-      "amount": null,
-      "date": "2026-02-04T16:13:45.097Z",
-      "note": "asdf",
-      "type": "expense",
-      "category": {
-        "id": 1770221625097,
-        "name": "asdf",
-        "type": "expense"
-      }
-    },
-    {
-      "id": "68e2",
-      "amount": 234324324,
-      "date": "2026-02-04T16:14:20.865Z",
+      "id": "2dab",
+      "amount": 150000,
+      "date": "2026-02-05T00:07:19.436Z",
       "note": "",
       "type": "income",
       "category": {
-        "id": 1770221660865,
-        "name": "asdf",
+        "id": 1770250039437,
+        "name": "Salary",
         "type": "income"
-      }
+      },
+      "paymentMethod": "bank_transfer"
     },
     {
-      "id": "7f63",
-      "amount": 5222,
-      "date": "2026-02-04T16:17:45.407Z",
+      "id": "318a",
+      "amount": 15000,
+      "date": "2026-02-05T00:07:47.701Z",
       "note": "",
       "type": "expense",
       "category": {
-        "id": 1770221865407,
-        "name": "test",
+        "id": 1770250067701,
+        "name": "Food",
         "type": "expense"
-      }
+      },
+      "paymentMethod": "cash",
+      "establishment": "Landmark Supermarket"
     },
     {
-      "id": "f663",
-      "amount": 23423432,
-      "date": "2026-02-04T16:17:55.734Z",
+      "id": "608e",
+      "amount": 10000,
+      "date": "2026-02-05T00:08:09.454Z",
       "note": "",
       "type": "expense",
       "category": {
-        "id": 1770221875734,
-        "name": "asdfa",
+        "id": 1770250089454,
+        "name": "Rent",
         "type": "expense"
-      }
+      },
+      "paymentMethod": "card",
+      "establishment": "House"
     }
   ],
-  "budgets": [],
+  "budgets": [
+    {
+      "id": "1770250166570",
+      "categoryId": 1770250166570,
+      "amount": 75000,
+      "month": "2026-02"
+    }
+  ],
   "categories": [
     {
       "id": "1",

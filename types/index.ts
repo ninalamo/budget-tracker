@@ -1,4 +1,5 @@
 export type TransactionType = "income" | "expense";
+export type PaymentMethod = "cash" | "card" | "bank_transfer" | "e_wallet";
 
 export interface Category {
   id: number;
@@ -14,6 +15,8 @@ export interface Transaction {
   note?: string;
   receiptUrl?: string;
   type: TransactionType;
+  paymentMethod?: PaymentMethod;
+  establishment?: string; // Where the transaction took place
 }
 
 export interface Budget {
@@ -21,4 +24,13 @@ export interface Budget {
   categoryId: number;
   amount: number;
   month: string; // YYYY-MM
+}
+
+export interface Agenda {
+  id: string;
+  title: string;
+  date: string; // ISO string
+  amount?: number;
+  isRecurring?: boolean;
+  completed?: boolean;
 }
